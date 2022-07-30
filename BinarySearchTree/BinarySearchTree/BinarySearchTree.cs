@@ -67,6 +67,32 @@ namespace BinarySearchTree
                 }
             }
         }
+        // creatin method for Serach in BST.
+        public void SearchTree(T Element, BinarySearchTree<T>BinaryTree)
+        {
+            if(BinaryTree == null)
+            {
+                Console.WriteLine("Binary Seach Tree is Empty");
+                
+            }
+            if (BinaryTree.NodeData.Equals(Element))
+            {
+                Console.WriteLine("\n{0} is Present in Binary Search Tree",BinaryTree.NodeData);
+
+            
+            }
+            if (Element.CompareTo(BinaryTree.NodeData) > 0)
+            {
+                SearchTree(Element,BinaryTree.RightTree);
+
+            }
+            if (Element.CompareTo(BinaryTree.NodeData) < 0)
+            {
+                SearchTree(Element,BinaryTree.LeftTree);
+            }
+            
+
+        }
 
         //For displaying binary search tree
         public void Display()

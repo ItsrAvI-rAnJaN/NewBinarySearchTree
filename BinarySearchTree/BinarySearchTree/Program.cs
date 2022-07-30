@@ -17,6 +17,7 @@ namespace BinarySearchTree
                 Console.WriteLine("\n0. Exit");
                 Console.WriteLine("1.Create Binary Search Tree by adding 56 and then adding 30 & 70");
                 Console.WriteLine("2.Create Binary Search Tree shown in figure.");
+                Console.WriteLine("3.Create to Search in Binary Search Tree");
                 Console.Write("\nEnter your choice : ");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -45,6 +46,25 @@ namespace BinarySearchTree
                         Console.WriteLine("\nBinary Search Tree (inorder traversal/Ascending) is :-");
                         objTree.Display();
                         objTree.Size();
+                        break;
+
+                    case 3:
+                        BinarySearchTree<int> objSearchInTree = new BinarySearchTree<int>(56);
+                        objSearchInTree.Insert(30);
+                        objSearchInTree.Insert(70);
+                        objSearchInTree.Insert(22);
+                        objSearchInTree.Insert(40);
+                        objSearchInTree.Insert(60);
+                        objSearchInTree.Insert(95);
+                        objSearchInTree.Insert(11);
+                        objSearchInTree.Insert(65);
+                        objSearchInTree.Insert(3);
+                        objSearchInTree.Insert(16);
+                        objSearchInTree.Insert(63);
+                        objSearchInTree.Insert(67);
+                        Console.WriteLine("\nBinary Search Tree (inorder traversal/Ascending) is :-");
+                        objSearchInTree.Display();
+                        objSearchInTree.SearchTree(63,objSearchInTree);
                         break;
                     case 0:
                         return;
